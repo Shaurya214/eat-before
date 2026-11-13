@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container-highest": "#e1e3e0",
+          "surface-container-low": "#f2f4f1",
+          "error-container": "#ffdad6",
+          "on-secondary-fixed": "#00210f",
+          "outline": "#717973",
+          "on-primary-fixed-variant": "#1c5039",
+          "on-secondary-fixed-variant": "#175131",
+          "background": "#f8faf7",
+          "on-background": "#191c1b",
+          "surface-dim": "#d8dbd8",
+          "status-fresh": "#2E7D32",
+          "surface-tint": "#366850",
+          "primary-container": "#174b35",
+          "status-warning": "#F5A623",
+          "error": "#ba1a1a",
+          "tertiary-container": "#5d3b00",
+          "on-error-container": "#93000a",
+          "surface": "#f8faf7",
+          "text-secondary": "#496355",
+          "inverse-on-surface": "#eff1ee",
+          "status-upcoming": "#EBB305",
+          "on-tertiary": "#ffffff",
+          "secondary-container": "#b2edc2",
+          "primary-fixed": "#b8efd0",
+          "on-surface": "#191c1b",
+          "on-error": "#ffffff",
+          "on-secondary": "#ffffff",
+          "border-subtle": "#E2EBE5",
+          "inverse-surface": "#2e312f",
+          "on-primary-fixed": "#002113",
+          "surface-container": "#eceeeb",
+          "tertiary-fixed": "#ffddb4",
+          "on-tertiary-fixed-variant": "#633f00",
+          "on-primary": "#ffffff",
+          "inverse-primary": "#9dd2b5",
+          "on-tertiary-container": "#ec9f1a",
+          "outline-variant": "#c0c9c1",
+          "secondary-fixed": "#b4f0c5",
+          "secondary-fixed-dim": "#99d4aa",
+          "secondary": "#326947",
+          "surface-variant": "#e1e3e0",
+          "on-primary-container": "#86ba9e",
+          "on-tertiary-fixed": "#291800",
+          "on-surface-variant": "#404943",
+          "on-secondary-container": "#366d4b",
+          "primary-fixed-dim": "#9dd2b5",
+          "surface-bright": "#f8faf7",
+          "status-danger": "#E53935",
+          "tertiary": "#402700",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-high": "#e7e9e6",
+          "tertiary-fixed-dim": "#ffb955",
+          "primary": "#003421",
+          "text-primary": "#13231B",
+          "surface-card": "#FFFFFF"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter": "1.5rem",
+          "space-lg": "1.5rem",
+          "margin": "2rem",
+          "margin-sm": "1rem",
+          "gutter-sm": "1rem",
+          "space-sm": "0.5rem",
+          "space-xl": "2.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "display-hero-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "display-hero-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between py-6 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-6"><img alt="ExpiryAlert Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCw_V-R8Pli2xJYeyw6_0XmnR_PKJhTvNfBfXyKxP6rTu-MnBPNuBXbSTshZ7tVz4qMlNTfFsO_R47DY7kCzP0Pk0lKJ_mG3kBb_aZnmXYn8mYinZJAL4RzVo4FmKTbi-JCEWdPbXyXroRoNzWIQ5ZuRAXEAU39URfPhKLZ0hkQ1sTXIrAn4F1G5aaX-ZJVvsIadtWfmdei5ciewz2AdXN4seWjMjaZ-WTrRFapkLO9jA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary leading-tight">ExpiryAlert</span><span class="font-label-sm text-label-sm text-text-secondary uppercase">Smart Pantry</span></div></div><nav class="flex flex-col gap-1 px-3" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg shadow-sm"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Dashboard</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-pantry" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>My Pantry</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">8 items</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-recipe-chef" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>AI Recipe Chef</span></div><span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">New</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 transition-colors bg-primary-container text-on-primary font-bold rounded-lg shadow-sm" data-path="analytics-history" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span>Analytics / History</span></a></nav></div><div class="px-4"><div class="p-3 bg-surface-card rounded-xl flex items-center gap-3 shadow-[0_1px_3px_0_rgba(23,75,53,0.04)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA29OmpM60D2gncPTcuUF2I68CEbrNbPsuTvcT6GzBqLZ1krLt6neS0fAx9xfwvu2bv_qY-XIoSLm0VFBchj6Fe5wNwz1oVZ0hsyftmGahkT6rPMnU0Q2GLhpiU38X5jOLBX9JcL46zITpjKRmQAaig8Oj5PTBphcMKKbZxZCyMkkKyIUGvmupJHqg25mdxYQzYhKjOxjfnMYYYK_t_lgBXEnkHPXhpQN89DI2yK1vO"/><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-text-primary truncate">Alex Rivera</span><span class="font-label-sm text-label-sm text-text-secondary truncate">Student Chef</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-4 flex-1 max-w-md"><div class="flex items-center w-full bg-surface-card rounded-lg px-3 py-1.5 shadow-[0_1px_3px_0_rgba(23,75,53,0.04)]"><span class="material-symbols-outlined text-outline mr-2 text-[20px]">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline" placeholder="Search pantry, ingredients, recipes..." type="text"/></div></div><div class="flex items-center gap-4"><div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-highest rounded-full"><span class="w-2 h-2 rounded-full bg-status-danger"></span><span class="font-label-sm text-label-sm text-error font-bold">2 Expiring Soon</span></div><button class="flex items-center gap-2 bg-primary-container text-on-primary px-space-md py-2 rounded-lg font-label-lg text-label-lg hover:bg-primary transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Add Food</span></button><div class="flex items-center ml-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA29OmpM60D2gncPTcuUF2I68CEbrNbPsuTvcT6GzBqLZ1krLt6neS0fAx9xfwvu2bv_qY-XIoSLm0VFBchj6Fe5wNwz1oVZ0hsyftmGahkT6rPMnU0Q2GLhpiU38X5jOLBX9JcL46zITpjKRmQAaig8Oj5PTBphcMKKbZxZCyMkkKyIUGvmupJHqg25mdxYQzYhKjOxjfnMYYYK_t_lgBXEnkHPXhpQN89DI2yK1vO"/></div></div></header><main class="w-full pt-16 px-gutter bg-surface min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Analytics & Zero-Waste Impact Header -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pt-2">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container mb-2.5">
+<span class="material-symbols-outlined text-[16px]">eco</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Zero-Waste Scorecard</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">Pantry Analytics &amp; Impact</h1>
+<p class="font-body-md text-body-md text-text-secondary mt-1">
+        Track your food waste reduction, grocery money saved, and sustainable consumption habits.
+      </p>
+</div>
+<!-- Date Range Filter & Export Actions -->
+<div class="flex items-center gap-3">
+<div class="relative inline-block text-left" id="dateFilterDropdown">
+<button class="inline-flex items-center justify-between gap-3 px-4 py-2.5 bg-surface-card rounded-lg shadow-sm font-label-lg text-label-lg text-text-primary hover:bg-surface-container-low transition-colors" id="rangeMenuButton" type="button">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">calendar_today</span>
+<span id="currentRangeText">Last 30 Days</span>
+<span class="material-symbols-outlined text-[18px] text-outline">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-44 rounded-lg bg-surface-card shadow-xl z-20 py-1.5 flex flex-col" id="rangeOptions">
+<button class="px-4 py-2 text-left font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors flex items-center justify-between" onclick="selectRange('This Week')" type="button">
+<span>This Week</span>
+</button>
+<button class="px-4 py-2 text-left font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors flex items-center justify-between" onclick="selectRange('This Month')" type="button">
+<span>This Month</span>
+</button>
+<button class="px-4 py-2 text-left font-body-sm text-body-sm text-primary-container font-semibold bg-surface-container-low transition-colors flex items-center justify-between" onclick="selectRange('Last 30 Days')" type="button">
+<span>Last 30 Days</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">check</span>
+</button>
+<button class="px-4 py-2 text-left font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors flex items-center justify-between" onclick="selectRange('All Time')" type="button">
+<span>All Time</span>
+</button>
+</div>
+</div>
+<button class="p-2.5 bg-surface-card text-text-secondary hover:text-text-primary rounded-lg shadow-sm transition-colors" title="Download Report" type="button">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+</button>
+</div>
+</section>
+<!-- Top Impact Metrics: 4 Bento Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-8">
+<!-- Metric 1: Total Food Saved -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-container/20 pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="p-2.5 rounded-lg bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[22px]">energy_savings_leaf</span>
+</div>
+<div class="inline-flex items-center gap-1 text-status-fresh font-label-sm text-label-sm font-bold bg-surface-container-low px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+14%</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-text-primary font-bold">88.4%</span>
+</div>
+<div class="font-label-md text-label-md text-text-primary mt-0.5">Total Food Saved</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Consumed safely before expiration date</p>
+</div>
+</div>
+<!-- Metric 2: Money Saved -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-tertiary-fixed/30 pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="p-2.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">savings</span>
+</div>
+<div class="inline-flex items-center gap-1 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold bg-tertiary-fixed/40 px-2 py-0.5 rounded-full">
+<span>+$38.20</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-text-primary font-bold">$142.50</span>
+</div>
+<div class="font-label-md text-label-md text-text-primary mt-0.5">Money Saved</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Estimated grocery waste budget prevented</p>
+</div>
+</div>
+<!-- Metric 3: CO2 Footprint -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary-fixed/30 pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="p-2.5 rounded-lg bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-[22px]">cloud_done</span>
+</div>
+<div class="inline-flex items-center gap-1 text-status-fresh font-label-sm text-label-sm font-bold bg-surface-container-low px-2 py-0.5 rounded-full">
+<span>-4.2 kg</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-text-primary font-bold">18.6</span>
+<span class="font-headline-sm text-headline-sm text-text-secondary font-medium">kg CO₂e</span>
+</div>
+<div class="font-label-md text-label-md text-text-primary mt-0.5">Carbon Avoided</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Equivalent to 46 miles of car travel</p>
+</div>
+</div>
+<!-- Metric 4: Recipes Cooked with AI -->
+<div class="relative overflow-hidden bg-primary-container text-on-primary rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="p-2.5 rounded-lg bg-surface-card/15 text-primary-fixed">
+<span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary-fixed">Gemini 1.5</span>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-primary font-bold">12</span>
+<span class="font-headline-sm text-headline-sm text-on-primary/80 font-medium">meals</span>
+</div>
+<div class="font-label-md text-label-md text-on-primary font-semibold mt-0.5">Cooked with AI Chef</div>
+<p class="font-body-sm text-body-sm text-on-primary/70 mt-1">Rescued ingredients turned into dinners</p>
+</div>
+</div>
+</section>
+<!-- Smart Kitchen Insights Hero Banner -->
+<section class="mb-8 p-5 md:p-6 bg-gradient-to-r from-surface-card via-surface-card to-secondary-container/20 rounded-2xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container-high rounded-xl text-primary-container shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[26px]">lightbulb</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-tertiary-fixed-variant tracking-wider bg-tertiary-fixed/60 px-2 py-0.5 rounded">Smart Kitchen Insight</span>
+<span class="text-text-secondary font-body-sm text-body-sm">• Powered by Gemini AI</span>
+</div>
+<p class="font-body-lg text-body-lg text-text-primary mt-1 font-medium leading-relaxed">
+          You tend to have leftover <span class="font-semibold text-primary-container">leafy greens</span>. Chef Gemini recommends planning a quick pasta or frittata on Day 4 after shopping.
+        </p>
+</div>
+</div>
+<div class="shrink-0 self-end sm:self-center">
+<button class="inline-flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg hover:bg-primary transition-colors shadow-sm whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[18px]">restaurant_menu</span>
+<span>Plan Meal Prep</span>
+</button>
+</div>
+</section>
+<!-- Visual Breakdowns: Split Progress & Category Performance Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-8">
+<!-- Left: Split Progress Ratio Card (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-card rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-sm text-headline-sm text-text-primary font-bold">Waste vs. Consumed</h2>
+<span class="font-label-sm text-label-sm text-text-secondary bg-surface-container-low px-2 py-1 rounded">32 items total</span>
+</div>
+<!-- Large Proportion Graphic -->
+<div class="my-6">
+<div class="flex items-center justify-between text-body-sm font-label-md mb-2">
+<span class="text-status-fresh font-bold flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-fresh inline-block"></span>
+              Consumed: 88%
+            </span>
+<span class="text-status-danger font-bold flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-danger inline-block"></span>
+              Discarded: 12%
+            </span>
+</div>
+<!-- Stacked Bar -->
+<div class="w-full h-4 rounded-full bg-surface-container flex overflow-hidden p-0.5">
+<div class="bg-status-fresh h-full rounded-l-full transition-all duration-700 ease-out" style="width: 88%"></div>
+<div class="w-1 bg-surface-card"></div>
+<div class="bg-status-danger h-full rounded-r-full transition-all duration-700 ease-out" style="width: 12%"></div>
+</div>
+</div>
+<!-- Metric Details Pill -->
+<div class="grid grid-cols-2 gap-3 mt-4">
+<div class="p-3.5 rounded-xl bg-surface-container-low">
+<div class="font-label-sm text-label-sm text-text-secondary">EATEN &amp; COOKED</div>
+<div class="font-headline-md text-headline-md font-bold text-status-fresh mt-0.5">28 items</div>
+<div class="font-body-sm text-body-sm text-text-secondary mt-1">Saved from landfill</div>
+</div>
+<div class="p-3.5 rounded-xl bg-error-container/30">
+<div class="font-label-sm text-label-sm text-error">EXPIRED &amp; WASTED</div>
+<div class="font-headline-md text-headline-md font-bold text-status-danger mt-0.5">4 items</div>
+<div class="font-body-sm text-body-sm text-error/80 mt-1">~ $14.20 spoiled value</div>
+</div>
+</div>
+</div>
+<div class="pt-5 mt-4 flex items-center justify-between text-text-secondary font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-status-fresh">verified</span>
+          Goal target: 90% zero-waste
+        </span>
+<span class="font-label-md text-label-md font-semibold text-primary-container">Top 15% of Chefs</span>
+</div>
+</div>
+<!-- Right: Category Breakdown Bars (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-card rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-text-primary font-bold">Category Consumption Rates</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">Safety margin per pantry division</p>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-status-fresh"></span>
+<span>Efficiency Index</span>
+</div>
+</div>
+<!-- Categories with Rich Bars -->
+<div class="space-y-4 my-2">
+<!-- Pantry Staples: 100% -->
+<div>
+<div class="flex justify-between items-center mb-1.5 font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-surface-container-high text-primary-container material-symbols-outlined text-[16px]">kitchen</span>
+<span class="text-text-primary font-semibold">Dry Goods &amp; Pantry</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-secondary">11/11 rescued</span>
+<span class="font-bold text-status-fresh">100% saved</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="bg-status-fresh h-full rounded-full transition-all duration-700" style="width: 100%"></div>
+</div>
+</div>
+<!-- Dairy: 92% -->
+<div>
+<div class="flex justify-between items-center mb-1.5 font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-surface-container-high text-primary-container material-symbols-outlined text-[16px]">egg_alt</span>
+<span class="text-text-primary font-semibold">Dairy &amp; Eggs</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-secondary">7/8 rescued</span>
+<span class="font-bold text-status-fresh">92% saved</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="bg-status-fresh h-full rounded-full transition-all duration-700" style="width: 92%"></div>
+</div>
+</div>
+<!-- Bakery: 85% -->
+<div>
+<div class="flex justify-between items-center mb-1.5 font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-surface-container-high text-primary-container material-symbols-outlined text-[16px]">bakery_dining</span>
+<span class="text-text-primary font-semibold">Bakery &amp; Grains</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-secondary">5/6 rescued</span>
+<span class="font-bold text-status-warning">85% saved</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="bg-status-warning h-full rounded-full transition-all duration-700" style="width: 85%"></div>
+</div>
+</div>
+<!-- Produce: 78% -->
+<div>
+<div class="flex justify-between items-center mb-1.5 font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-surface-container-high text-primary-container material-symbols-outlined text-[16px]">nutrition</span>
+<span class="text-text-primary font-semibold">Fresh Produce</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-secondary">8/10 rescued</span>
+<span class="font-bold text-status-warning">78% saved</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="bg-status-warning h-full rounded-full transition-all duration-700" style="width: 78%"></div>
+</div>
+</div>
+</div>
+<!-- Quick category suggestion -->
+<div class="pt-3 flex items-center justify-between text-body-sm text-body-sm text-text-secondary">
+<span class="text-text-secondary">Need improvement in <strong>Produce</strong></span>
+<a class="font-label-md text-label-md text-primary-container hover:underline flex items-center gap-1" href="#">
+<span>View Produce Tips</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Rescued Recipes Highlight Showcase (Visual Richness) -->
+<section class="mb-8">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-text-primary font-bold">Rescued Through AI Recipes</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">Meals created just-in-time from items about to expire</p>
+</div>
+<a class="text-primary-container font-label-lg text-label-lg hover:underline flex items-center gap-1" href="#">
+<span>View Recipe Archive</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Recipe Card 1 -->
+<div class="bg-surface-card rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="relative h-40 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Warm bowl of rustic creamy garlic white sauce fusilli pasta garnished with parsley on dark kitchen counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATE_pe4AtPv_q9VA4dn1c2Blm1V4Xu8w0hBw8ekJPOcif-VgL8BVPte1bobkOJCsKRw2zwK-nDRMRiy3N2kYEu6F8RSOTe48La8hA9pSgCCLW4NfWlLXC3_nWxDBAg0OI1a4aYnErsJVa7Ah6CVUhUExOQri_C63w9geg-vf3WWJyRkYeC3dIFRV6El7JJJ5lrz2k2Iz9tQvaPIaAGot_T9_LFIggH0CSkDOrN3go-"/>
+<span class="absolute top-3 left-3 bg-surface-card/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-sm text-label-sm text-text-primary font-bold">Creamy Pasta</span>
+<span class="absolute bottom-3 right-3 bg-primary-container text-on-primary px-2.5 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span> Rescued Milk
+          </span>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-text-secondary font-label-sm text-label-sm mb-1">
+<span>20 mins</span>
+<span>•</span>
+<span>2 Servings</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Creamy Garlic Fusilli</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Used 400ml expiring Whole Milk and leftover Fusilli pasta before spoilage.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-status-fresh font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Consumed Today
+            </span>
+<span class="text-text-secondary font-medium">Saved $4.50</span>
+</div>
+</div>
+</div>
+<!-- Recipe Card 2 -->
+<div class="bg-surface-card rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="relative h-40 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Rustic cast iron skillet with vegetable frittata featuring spinach, onions, and melted cheese cut into wedges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWg3dNQaozY65mM_oG-uXl4zZhggioeTVWqDpLMIUgQyeTVonRlKEOdcZk3eXbnMZv2G6FyqRLUg2-2amg8gh2dL7lKMyKWeXhbcUI0KW4uWK7e9NwD7icmQSEdlwH3y6Y_mYTvDhKOWEKhnqhaGoAevZzXzRs-GBY52mMf8oOyCBDqXOgNQQvSQCIRa7XfxYnbaAmuBoFlIr5d9XzEX-92ueRziDoz8y7uQB6IzBg"/>
+<span class="absolute top-3 left-3 bg-surface-card/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-sm text-label-sm text-text-primary font-bold">Iron Skillet Frittata</span>
+<span class="absolute bottom-3 right-3 bg-primary-container text-on-primary px-2.5 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span> Rescued Spinach
+          </span>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-text-secondary font-label-sm text-label-sm mb-1">
+<span>15 mins</span>
+<span>•</span>
+<span>3 Servings</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Wilted Greens Egg Bake</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Combined loose spinach, 3 eggs, and end pieces of cheddar into a hearty breakfast.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-status-fresh font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Consumed 3d ago
+            </span>
+<span class="text-text-secondary font-medium">Saved $6.20</span>
+</div>
+</div>
+</div>
+<!-- Recipe Card 3 -->
+<div class="bg-surface-card rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group">
+<div class="relative h-40 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Thick berry banana smoothie bowl topped with oats, chia seeds, and berries in a ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt0M2OGrU0x8j7-o2w_k0sNuR02m5kmJAh7pTx5Mugs7TcDSnEVxIqtZJvcRUs-ugXeMG4fKEqVee2EoU0YQVPOVeijTzMBx5k8HZ5eKxvqGj7cG57jh5GkJ8P-NWuHVQNrKCVgoCM6PmWbg1x7dXzeIB2jQ_woRjRcKOvyFUJo3xDvtnQ_dYt1wUgIrVG0EmXrnuVlIPT_sbwNxRwlk_mObMLZpd7tHL2vp7JEXs8"/>
+<span class="absolute top-3 left-3 bg-surface-card/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-sm text-label-sm text-text-primary font-bold">Smoothie Bowl</span>
+<span class="absolute bottom-3 right-3 bg-primary-container text-on-primary px-2.5 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">auto_awesome</span> Rescued Bananas
+          </span>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-text-secondary font-label-sm text-label-sm mb-1">
+<span>5 mins</span>
+<span>•</span>
+<span>1 Serving</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Ripe Banana Power Bowl</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Blended overripe spotted bananas with greek yogurt and rolled oats.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-status-fresh font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Consumed 5d ago
+            </span>
+<span class="text-text-secondary font-medium">Saved $3.10</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Expiry Timeline & Consumption Log Table -->
+<section class="bg-surface-card rounded-2xl p-6 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-text-primary font-bold">Expiry Timeline &amp; Consumption Log</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">Recent actions logged automatically across pantry entries</p>
+</div>
+<div class="flex items-center gap-2 self-start sm:self-auto">
+<span class="font-label-sm text-label-sm text-text-secondary">Filter by:</span>
+<button class="px-3 py-1 bg-surface-container text-text-primary font-label-sm text-label-sm rounded-lg hover:bg-surface-container-high transition-colors" type="button">All</button>
+<button class="px-3 py-1 bg-surface-container-low text-text-secondary font-label-sm text-label-sm rounded-lg hover:bg-surface-container hover:text-text-primary transition-colors" type="button">AI Rescued</button>
+<button class="px-3 py-1 bg-surface-container-low text-text-secondary font-label-sm text-label-sm rounded-lg hover:bg-surface-container hover:text-text-primary transition-colors" type="button">Wasted</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-text-secondary font-label-md text-label-md">
+<th class="py-3 px-4 rounded-l-lg">Item Name</th>
+<th class="py-3 px-4">Action &amp; Context</th>
+<th class="py-3 px-4">Freshness Status</th>
+<th class="py-3 px-4">Logged Time</th>
+<th class="py-3 px-4 rounded-r-lg text-right">Zero-Waste Tip</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Whole Milk -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4 font-semibold text-text-primary">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">local_drink</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-text-primary">Whole Milk</div>
+<div class="font-label-sm text-label-sm text-text-secondary">Dairy • 1 Liter</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-status-fresh">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>Marked Consumed via AI Recipe</span>
+</div>
+<span class="text-text-secondary text-[12px]">Used in: Creamy Garlic Pasta</span>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-status-fresh/10 text-status-fresh font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-fresh"></span>
+                Consumed (Rescued)
+              </span>
+</td>
+<td class="py-4 px-4 text-text-secondary">
+<div class="font-medium text-text-primary">Today</div>
+<div class="text-[12px]">12:45 PM</div>
+</td>
+<td class="py-4 px-4 text-right">
+<span class="text-text-secondary italic text-[13px]">Rescued on final expiry day</span>
+</td>
+</tr>
+<!-- Row 2: Fusilli Pasta -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4 font-semibold text-text-primary">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">lunch_dining</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-text-primary">Fusilli Pasta</div>
+<div class="font-label-sm text-label-sm text-text-secondary">Pantry • 500g</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="font-label-md text-label-md text-text-primary">Consumed Normally</span>
+<div class="text-text-secondary text-[12px]">Pantry staple batch</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-status-fresh/10 text-status-fresh font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-fresh"></span>
+                Consumed
+              </span>
+</td>
+<td class="py-4 px-4 text-text-secondary">
+<div class="font-medium text-text-primary">Yesterday</div>
+<div class="text-[12px]">7:10 PM</div>
+</td>
+<td class="py-4 px-4 text-right">
+<span class="text-text-secondary text-[13px]">Dry pantry rotation on track</span>
+</td>
+</tr>
+<!-- Row 3: Greek Yogurt -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-4 font-semibold text-text-primary">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-status-warning">
+<span class="material-symbols-outlined text-[20px]">icecream</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-text-primary">Greek Yogurt</div>
+<div class="font-label-sm text-label-sm text-text-secondary">Dairy • 450g tub</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="font-label-md text-label-md text-status-warning">Expiring in 3 days</span>
+<div class="text-text-secondary text-[12px]">Priority consumption recommended</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-status-warning/15 text-status-warning font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+                Status: On Track
+              </span>
+</td>
+<td class="py-4 px-4 text-text-secondary">
+<div class="font-medium text-text-primary">Exp: Oct 28</div>
+<div class="text-[12px]">Auto-monitored</div>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-primary-container hover:underline font-label-sm text-label-sm font-semibold inline-flex items-center gap-1" type="button">
+<span>Generate Recipe</span>
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Hass Avocado (Expired / Wasted) -->
+<tr class="hover:bg-error-container/10 transition-colors">
+<td class="py-4 px-4 font-semibold text-text-primary">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-error-container/30 flex items-center justify-center text-status-danger">
+<span class="material-symbols-outlined text-[20px]">spa</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-text-primary">Hass Avocado</div>
+<div class="font-label-sm text-label-sm text-text-secondary">Produce • 1 unit</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="font-label-md text-label-md text-status-danger font-semibold">Expired (Logged as Wasted)</div>
+<div class="text-error/80 text-[12px]">Missed consumption window</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-status-danger/10 text-status-danger font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-danger"></span>
+                Discarded
+              </span>
+</td>
+<td class="py-4 px-4 text-text-secondary">
+<div class="font-medium text-text-primary">2 days ago</div>
+<div class="text-[12px]">Oct 23, 9:15 AM</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1.5 text-on-tertiary-fixed-variant bg-tertiary-fixed/30 px-3 py-1 rounded-lg text-left max-w-xs ml-auto">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container shrink-0">tips_and_updates</span>
+<span class="font-label-sm text-label-sm">Next time, freeze ripe avocados for smoothies!</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-6 pt-4 text-text-secondary font-body-sm text-body-sm">
+<span>Showing 4 of 32 total pantry activities</span>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-text-primary disabled:opacity-40 transition-colors" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-label-md text-label-md text-text-primary px-2">Page 1 of 8</span>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple dropdown interaction for Date Range Selector
+  const rangeBtn = document.getElementById('rangeMenuButton');
+  const rangeOptions = document.getElementById('rangeOptions');
+  const currentRangeText = document.getElementById('currentRangeText');
+
+  if (rangeBtn && rangeOptions) {
+    rangeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      rangeOptions.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', () => {
+      rangeOptions.classList.add('hidden');
+    });
+  }
+
+  function selectRange(label) {
+    if (currentRangeText) {
+      currentRangeText.innerText = label;
+    }
+    if (rangeOptions) {
+      rangeOptions.classList.add('hidden');
+    }
+  }
+</script></main></div></body></html>

@@ -1,0 +1,34 @@
+{
+  "name": "eat-before",
+  "version": "1.0.0",
+  "description": "Smart AI-powered digital pantry manager that reduces food waste by tracking grocery expiry dates and generating recipes from available ingredients.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shaurya214/eat-before.git"
+  },
+  "keywords": [
+    "pantry",
+    "food-waste",
+    "expiry-tracker",
+    "gemini",
+    "ai-recipes",
+    "zero-waste"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

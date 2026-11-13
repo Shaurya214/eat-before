@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container-highest": "#e1e3e0",
+          "surface-container-low": "#f2f4f1",
+          "error-container": "#ffdad6",
+          "on-secondary-fixed": "#00210f",
+          "outline": "#717973",
+          "on-primary-fixed-variant": "#1c5039",
+          "on-secondary-fixed-variant": "#175131",
+          "background": "#f8faf7",
+          "on-background": "#191c1b",
+          "surface-dim": "#d8dbd8",
+          "status-fresh": "#2E7D32",
+          "surface-tint": "#366850",
+          "primary-container": "#174b35",
+          "status-warning": "#F5A623",
+          "error": "#ba1a1a",
+          "tertiary-container": "#5d3b00",
+          "on-error-container": "#93000a",
+          "surface": "#f8faf7",
+          "text-secondary": "#496355",
+          "inverse-on-surface": "#eff1ee",
+          "status-upcoming": "#EBB305",
+          "on-tertiary": "#ffffff",
+          "secondary-container": "#b2edc2",
+          "primary-fixed": "#b8efd0",
+          "on-surface": "#191c1b",
+          "on-error": "#ffffff",
+          "on-secondary": "#ffffff",
+          "border-subtle": "#E2EBE5",
+          "inverse-surface": "#2e312f",
+          "on-primary-fixed": "#002113",
+          "surface-container": "#eceeeb",
+          "tertiary-fixed": "#ffddb4",
+          "on-tertiary-fixed-variant": "#633f00",
+          "on-primary": "#ffffff",
+          "inverse-primary": "#9dd2b5",
+          "on-tertiary-container": "#ec9f1a",
+          "outline-variant": "#c0c9c1",
+          "secondary-fixed": "#b4f0c5",
+          "secondary-fixed-dim": "#99d4aa",
+          "secondary": "#326947",
+          "surface-variant": "#e1e3e0",
+          "on-primary-container": "#86ba9e",
+          "on-tertiary-fixed": "#291800",
+          "on-surface-variant": "#404943",
+          "on-secondary-container": "#366d4b",
+          "primary-fixed-dim": "#9dd2b5",
+          "surface-bright": "#f8faf7",
+          "status-danger": "#E53935",
+          "tertiary": "#402700",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-high": "#e7e9e6",
+          "tertiary-fixed-dim": "#ffb955",
+          "primary": "#003421",
+          "text-primary": "#13231B",
+          "surface-card": "#FFFFFF"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter": "1.5rem",
+          "space-lg": "1.5rem",
+          "margin": "2rem",
+          "margin-sm": "1rem",
+          "gutter-sm": "1rem",
+          "space-sm": "0.5rem",
+          "space-xl": "2.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "display-hero-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "display-hero-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between py-6 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-6"><img alt="ExpiryAlert Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCw_V-R8Pli2xJYeyw6_0XmnR_PKJhTvNfBfXyKxP6rTu-MnBPNuBXbSTshZ7tVz4qMlNTfFsO_R47DY7kCzP0Pk0lKJ_mG3kBb_aZnmXYn8mYinZJAL4RzVo4FmKTbi-JCEWdPbXyXroRoNzWIQ5ZuRAXEAU39URfPhKLZ0hkQ1sTXIrAn4F1G5aaX-ZJVvsIadtWfmdei5ciewz2AdXN4seWjMjaZ-WTrRFapkLO9jA"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary leading-tight">ExpiryAlert</span><span class="font-label-sm text-label-sm text-text-secondary uppercase">Smart Pantry</span></div></div><nav class="flex flex-col gap-1 px-3" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg shadow-sm"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Dashboard</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-pantry" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>My Pantry</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">8 items</span></a><a aria-current="page" class="flex items-center justify-between px-3 py-2.5 transition-colors bg-primary-container text-on-primary font-bold rounded-lg shadow-sm" data-path="ai-recipe-chef" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>AI Recipe Chef</span></div><span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">New</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics-history" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span>Analytics / History</span></a></nav></div><div class="px-4"><div class="p-3 bg-surface-card rounded-xl flex items-center gap-3 shadow-[0_1px_3px_0_rgba(23,75,53,0.04)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA29OmpM60D2gncPTcuUF2I68CEbrNbPsuTvcT6GzBqLZ1krLt6neS0fAx9xfwvu2bv_qY-XIoSLm0VFBchj6Fe5wNwz1oVZ0hsyftmGahkT6rPMnU0Q2GLhpiU38X5jOLBX9JcL46zITpjKRmQAaig8Oj5PTBphcMKKbZxZCyMkkKyIUGvmupJHqg25mdxYQzYhKjOxjfnMYYYK_t_lgBXEnkHPXhpQN89DI2yK1vO"><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-text-primary truncate">Alex Rivera</span><span class="font-label-sm text-label-sm text-text-secondary truncate">Student Chef</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-4 flex-1 max-w-md"><div class="flex items-center w-full bg-surface-card rounded-lg px-3 py-1.5 shadow-[0_1px_3px_0_rgba(23,75,53,0.04)]"><span class="material-symbols-outlined text-outline mr-2 text-[20px]">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline" placeholder="Search pantry, ingredients, recipes..." type="text"></div></div><div class="flex items-center gap-4"><div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-highest rounded-full"><span class="w-2 h-2 rounded-full bg-status-danger"></span><span class="font-label-sm text-label-sm text-error font-bold">2 Expiring Soon</span></div><button class="flex items-center gap-2 bg-primary-container text-on-primary px-space-md py-2 rounded-lg font-label-lg text-label-lg hover:bg-primary transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Add Food</span></button><div class="flex items-center ml-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA29OmpM60D2gncPTcuUF2I68CEbrNbPsuTvcT6GzBqLZ1krLt6neS0fAx9xfwvu2bv_qY-XIoSLm0VFBchj6Fe5wNwz1oVZ0hsyftmGahkT6rPMnU0Q2GLhpiU38X5jOLBX9JcL46zITpjKRmQAaig8Oj5PTBphcMKKbZxZCyMkkKyIUGvmupJHqg25mdxYQzYhKjOxjfnMYYYK_t_lgBXEnkHPXhpQN89DI2yK1vO"></div></div></header><main class="w-full pt-16 px-gutter bg-surface min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Toast Notification on Action -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 bg-primary text-on-primary px-5 py-3.5 rounded-xl shadow-xl" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">task_alt</span>
+<span class="font-label-lg text-label-lg" id="toastMessage">Recipe ingredients updated!</span>
+</div>
+<!-- Screen Header (No duplicate H1 brand) -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pt-2">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center justify-center p-1.5 rounded-lg bg-primary-container text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</span>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">Gemini AI Recipe Studio 🍳</h1>
+</div>
+<p class="font-body-md text-body-md text-text-secondary max-w-2xl">
+        Instant, delicious zero-waste recipes crafted specifically from your perishable and expiring pantry ingredients.
+      </p>
+</div>
+<!-- Live Telemetry / Impact Badge -->
+<div class="flex items-center gap-3 self-start md:self-auto bg-surface-container-low px-4 py-2 rounded-xl">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Demo Impact</span>
+<span class="font-label-lg text-label-lg text-status-fresh font-bold">₹380 Waste Prevented</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">savings</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: Active Ingredients Context Bar & Dynamic Filter Controls -->
+<section class="bg-surface-card rounded-xl p-5 mb-8 shadow-sm flex flex-col gap-5 relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary-fixed-dim"></div>
+<!-- Safety Guard Notice (US-004) -->
+<div class="flex items-center justify-between flex-wrap gap-3 bg-surface-container-low px-4 py-2.5 rounded-lg text-on-surface">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-status-fresh text-[20px]">verified_user</span>
+<span class="font-label-md text-label-md font-semibold text-text-primary">Safety Guard Active</span>
+<span class="hidden sm:inline-block text-outline font-label-md">|</span>
+<span class="font-body-sm text-body-sm text-text-secondary">
+          1 Expired item <strong class="text-error font-medium">(Avocados - expired 2d ago)</strong> automatically excluded from recipe suggestions.
+        </span>
+</div>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant uppercase tracking-wider">
+        Rule US-004 Enforced
+      </span>
+</div>
+<!-- Auto-selected Ingredients Chips -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-text-primary uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+          Select Pantry Perishables for LLM Prompt Context
+        </span>
+<span class="font-body-sm text-body-sm text-text-secondary">4 selected for Gemini context</span>
+</div>
+<div class="flex flex-wrap gap-2.5"><label class="group relative flex items-center gap-2.5 px-3.5 py-2 rounded-full cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all"><input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"><span class="w-2 h-2 rounded-full bg-status-danger animate-pulse"></span><span class="font-label-lg text-label-lg text-text-primary">Amul Toned Milk</span><span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-error-container text-on-error-container font-semibold">1d left</span></label><label class="group relative flex items-center gap-2.5 px-3.5 py-2 rounded-full cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all"><input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"><span class="w-2 h-2 rounded-full bg-status-warning"></span><span class="font-label-lg text-label-lg text-text-primary">Fresh Palak</span><span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">2d left</span></label><label class="group relative flex items-center gap-2.5 px-3.5 py-2 rounded-full cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all"><input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"><span class="w-2 h-2 rounded-full bg-status-upcoming"></span><span class="font-label-lg text-label-lg text-text-primary">Fresh Dahi / Curd</span><span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-text-secondary font-semibold">3d left</span></label><label class="group relative flex items-center gap-2.5 px-3.5 py-2 rounded-full cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all"><input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"><span class="w-2 h-2 rounded-full bg-status-fresh"></span><span class="font-label-lg text-label-lg text-text-primary">Whole Wheat Atta</span><span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-on-secondary-container font-semibold">Fresh</span></label></div>
+</div>
+<!-- Filter Pills & Generation CTA Toolbar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-3 bg-surface-container-low/50 p-3 rounded-xl">
+<div class="flex flex-wrap items-center gap-2"><span class="font-label-sm text-label-sm text-text-secondary uppercase pr-2">Preferences:</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-label-md text-label-md shadow-sm"><span class="material-symbols-outlined text-[16px] text-secondary">dinner_dining</span> Quick Dinner</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-label-md text-label-md shadow-sm"><span class="material-symbols-outlined text-[16px] text-secondary">timer</span> Under 20 mins</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-label-md text-label-md shadow-sm"><span class="material-symbols-outlined text-[16px] text-secondary">local_fire_department</span> Quick Tadka / Desi</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-label-md text-label-md shadow-sm"><span class="material-symbols-outlined text-[16px] text-secondary">spa</span> Jain friendly option</span><span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-label-md text-label-md shadow-sm"><span class="material-symbols-outlined text-[16px] text-secondary">shelves</span> Basic Masala Dabba assumed</span></div>
+<button class="inline-flex items-center justify-center gap-2.5 bg-primary-container text-on-primary px-6 py-2.5 rounded-lg font-label-lg text-label-lg hover:bg-primary transition-all duration-200 shadow-sm active:scale-95 group" id="regenerateBtn" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed group-hover:rotate-180 transition-transform duration-500">auto_awesome</span>
+<span>Regenerate Recipe</span>
+</button>
+</div>
+</section>
+<!-- SECTION 2: The Core Demo Showcase - Recipe Hero Bento Card -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Hero Recipe Details (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Main Dish Presentation Card -->
+<article class="bg-surface-card rounded-2xl overflow-hidden shadow-sm flex flex-col">
+<!-- Image & Editorial Title Banner -->
+<div class="relative w-full h-72 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Gourmet close-up photo of creamy garlic and spinach white sauce fusilli pasta presented in a warm rustic ceramic bowl. Fresh vibrant green wilted spinach is folded into a silky milk-based emulsion with cracked black pepper and a touch of grated parmesan. Natural soft window lighting, artisanal kitchen aesthetic, warm tones, high culinary photography detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDxEPLjqpARbQuACS9n2MSEaAOVU8o_YvB-14xlII-q7B3JZQCcr1nwgqI5DBxPQ3ckIQv16173MtiSL0EouFsAbOnVv_vYGxYSUP7o_txZPIz9jeslzlh6793w8YgS9fLHWkShwJQ5tYETMlh7jlcrI3qyl1JyVG0L89-CWhBLrXHwuRryttTRtoKSMELppcpHBEwHI-DjgWE2VXWyDMpUIDMreNwvbMCkdG9IRC8">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+<!-- Top Pills Over Image -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-card/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-md">
+<span class="material-symbols-outlined text-[16px] text-status-fresh">psychology</span>
+              Gemini Pro 1.5 Recipe
+            </span>
+<button class="w-9 h-9 rounded-full bg-surface-card/90 backdrop-blur-md text-on-surface flex items-center justify-center hover:text-error transition-colors shadow-md" id="saveFavoriteBtn" type="button">
+<span class="material-symbols-outlined text-[20px]" id="favoriteIcon">favorite_border</span>
+</button>
+</div>
+<!-- Bottom Title Overlay -->
+<div class="absolute bottom-5 left-6 right-6 flex flex-col gap-2"><div class="flex items-center gap-2"><span class="px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold">Desi Zero-Waste Hero</span><span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Quick Tadka</span></div><h2 class="font-headline-lg text-headline-lg text-on-primary leading-tight font-bold">Velvety Palak Dahi Bhurji &amp; Jeera Paratha</h2></div>
+</div>
+<!-- Metric Badges Row -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-5 bg-surface-container-low"><div class="flex items-center gap-2.5 bg-surface-card p-3 rounded-xl shadow-sm"><span class="material-symbols-outlined text-secondary text-[22px]">schedule</span><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-text-secondary">Duration</span><span class="font-label-md text-label-md text-text-primary font-bold">18 Mins Total</span></div></div><div class="flex items-center gap-2.5 bg-surface-card p-3 rounded-xl shadow-sm"><span class="material-symbols-outlined text-status-warning text-[22px]">eco</span><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-text-secondary">Rescued</span><span class="font-label-md text-label-md text-text-primary font-bold">2 Perishing (Palak+Dahi)</span></div></div><div class="flex items-center gap-2.5 bg-surface-card p-3 rounded-xl shadow-sm"><span class="material-symbols-outlined text-text-secondary text-[22px]">skillet</span><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-text-secondary">Skill Level</span><span class="font-label-md text-label-md text-text-primary font-bold">Easy Home Tadka</span></div></div><div class="flex items-center gap-2.5 bg-surface-card p-3 rounded-xl shadow-sm"><span class="material-symbols-outlined text-status-fresh text-[22px]">payments</span><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-text-secondary">Savings</span><span class="font-label-md text-label-md text-status-fresh font-bold">Saves ~₹320</span></div></div></div>
+<!-- Ingredients Breakdown -->
+<div class="p-6 flex flex-col gap-6">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-status-fresh"></span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Available In Your Pantry (4)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-status-fresh font-semibold">100% Verified Match</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3"><div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-status-fresh text-[20px]">check_circle</span><div class="flex flex-col"><span class="font-label-md text-label-md text-text-primary font-bold">Fresh Dahi / Curd</span><span class="font-body-sm text-body-sm text-text-secondary">1.5 cups (Expiring in 24h)</span></div></div><span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Priority</span></div><div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-status-fresh text-[20px]">check_circle</span><div class="flex flex-col"><span class="font-label-md text-label-md text-text-primary font-bold">Fresh Palak</span><span class="font-body-sm text-body-sm text-text-secondary">2 cups chopped</span></div></div><span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Priority</span></div><div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-status-fresh text-[20px]">check_circle</span><div class="flex flex-col"><span class="font-label-md text-label-md text-text-primary font-bold">Fresh Paneer</span><span class="font-body-sm text-body-sm text-text-secondary">200g crumbled</span></div></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Dairy Fresh</span></div><div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-status-fresh text-[20px]">check_circle</span><div class="flex flex-col"><span class="font-label-md text-label-md text-text-primary font-bold">Ginger, Garlic &amp; Green Chillies</span><span class="font-body-sm text-body-sm text-text-secondary">Finely minced paste</span></div></div><span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-text-secondary font-label-sm text-label-sm">Pantry Base</span></div></div>
+</div>
+<!-- Assumed Pantry Staples Banner (PRD Section 18 Hallucination Prevention) -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3"><div class="flex items-start sm:items-center gap-2.5"><span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 sm:mt-0">kitchen</span><div class="flex flex-col"><span class="font-label-md text-label-md font-semibold text-text-primary">Standard Staples Assumed:</span><span class="font-body-sm text-body-sm text-text-secondary">Masala Dabba (Jeera, Rai, Haldi, Lal Mirch, Hing) • Mustard Oil / Desi Ghee</span></div></div><span class="text-secondary font-label-sm text-label-sm font-semibold shrink-0">No Grocery Trip Needed</span></div>
+<!-- Step-by-Step Cooking Guide -->
+<div class="flex flex-col gap-4 pt-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">format_list_numbered</span>
+                Step-by-Step Culinary Instructions
+              </h3>
+<span class="font-label-sm text-label-sm text-text-secondary uppercase">4 Quick Steps</span>
+</div>
+<div class="flex flex-col gap-3"><div class="flex gap-4 p-4 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container"><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm shrink-0">1</div><div class="flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-lg text-label-lg font-bold text-text-primary">Blanch &amp; Puree Palak</span><span class="font-label-sm text-label-sm text-text-secondary">3 mins</span></div><p class="font-body-md text-body-md text-text-secondary">Flash-blanch the <span class="text-status-warning font-semibold">expiring fresh palak</span> leaves in boiling water for 60 seconds, plunge in cold water to retain emerald green vibrancy, then pulse into a coarse puree.</p></div></div><div class="flex gap-4 p-4 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container"><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm shrink-0">2</div><div class="flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-lg text-label-lg font-bold text-text-primary">The Aromatic Tadka</span><span class="font-label-sm text-label-sm text-text-secondary">4 mins</span></div><p class="font-body-md text-body-md text-text-secondary">Heat 1 tbsp desi ghee or mustard oil in a kadai. Splutter cumin seeds, hing, minced garlic, and slit green chillies until delightfully fragrant.</p></div></div><div class="flex gap-4 p-4 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container"><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm shrink-0">3</div><div class="flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-lg text-label-lg font-bold text-text-primary">Whisk &amp; Simmer with Dahi</span><span class="font-label-sm text-label-sm text-text-secondary">5 mins</span></div><p class="font-body-md text-body-md text-text-secondary">Whisk the <span class="text-status-danger font-semibold">expiring dahi / curd</span> with a pinch of besan and turmeric so it doesn't split. Fold gently into the spiced tadka over low flame, stirring constantly.</p></div></div><div class="flex gap-4 p-4 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container"><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm shrink-0">4</div><div class="flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-lg text-label-lg font-bold text-text-primary">Fold Paneer, Gloss &amp; Serve</span><span class="font-label-sm text-label-sm text-text-secondary">4 mins</span></div><p class="font-body-md text-body-md text-text-secondary">Gently toss in crumbled paneer and cooked palak puree. Finish with a squeeze of fresh lemon and a dusting of garam masala. Serve steaming hot with fluffy parathas!</p></div></div></div>
+</div>
+<!-- Bottom Action Buttons: North Star Metric Journey (FR-003, PRD 11) -->
+<div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-surface-container-low p-4 rounded-xl"><div class="flex items-start sm:items-center gap-2.5"><span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 sm:mt-0">kitchen</span><div class="flex flex-col"><span class="font-label-md text-label-md font-semibold text-text-primary">Standard Staples Assumed:</span><span class="font-body-sm text-body-sm text-text-secondary">Masala Dabba (Jeera, Rai, Haldi, Lal Mirch, Hing) • Mustard Oil / Desi Ghee</span></div></div><span class="text-secondary font-label-sm text-label-sm font-semibold shrink-0">No Grocery Trip Needed</span></div>
+</div>
+</article>
+</div>
+<!-- Right Column: Interactive Gemini Chef Sidebar (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- AI Chef Reasoning & Prompt Card -->
+<div class="bg-surface-card rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">psychology_alt</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Gemini Prompt Logic</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Live v1.0</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+          The recipe engine constructed this meal by prioritizing high-spoilage perishables while discarding items beyond safe thresholds.
+        </p>
+<!-- Dynamic Reasoning Breakdown -->
+<div class="flex flex-col gap-2.5"><div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-1"><span class="font-label-sm text-label-sm font-bold text-status-danger flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-status-danger"></span>High Priority Item: Dahi / Curd</span><span class="font-body-sm text-body-sm text-text-secondary">Expires tomorrow. Whisked with besan to build a rich desi kadhi gravy base without curdling.</span></div><div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-1"><span class="font-label-sm text-label-sm font-bold text-status-warning flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>High Priority Item: Fresh Palak</span><span class="font-body-sm text-body-sm text-text-secondary">Expires in 48 hours. Blanched immediately to lock in iron and vibrant green pigment.</span></div><div class="p-3 rounded-xl bg-surface-container-low flex flex-col gap-1"><span class="font-label-sm text-label-sm font-bold text-status-fresh flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-status-fresh"></span>Fresh Base: Fresh Paneer</span><span class="font-body-sm text-body-sm text-text-secondary">Crumbled protein vehicle absorbing the aromatic cumin-garlic tadka.</span></div></div>
+<!-- Inline Data Visualizer: Rescue Composition -->
+<div class="pt-2 flex flex-col gap-2">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-text-secondary">Perishable Ingredients Rescued</span>
+<span class="font-bold text-status-fresh">80% Volume</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex">
+<div class="h-full bg-status-danger" style="width: 45%" title="Whole Milk"></div>
+<div class="h-full bg-status-warning" style="width: 35%" title="Spinach"></div>
+<div class="h-full bg-status-fresh" style="width: 20%" title="Staples"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] text-text-secondary"><span>Dahi (45%)</span><span>Palak (35%)</span><span>Paneer (20%)</span></div>
+</div>
+</div>
+<!-- Alternative Recipes in 1 Click -->
+<div class="bg-surface-card rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Alternative Ideas</h3>
+<span class="font-label-sm text-label-sm text-text-secondary">From same pantry</span>
+</div>
+<div class="flex flex-col gap-3"><div class="group p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex items-center gap-3"><div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden shrink-0 flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed"><span class="material-symbols-outlined text-[24px]">soup_kitchen</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-text-primary font-bold group-hover:text-primary transition-colors truncate">Palak Kadhi with Jeera Rice</span><span class="font-body-sm text-body-sm text-text-secondary truncate">Uses Curd (3d) &amp; Palak (2d) • 15 mins</span></div><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">chevron_right</span></div><div class="group p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer flex items-center gap-3"><div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden shrink-0 flex items-center justify-center bg-secondary-container text-on-secondary-container"><span class="material-symbols-outlined text-[24px]">bakery_dining</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-text-primary font-bold group-hover:text-primary transition-colors truncate">Spiced Dahi Toast Tadka</span><span class="font-body-sm text-body-sm text-text-secondary truncate">Crispy bread with tempered curd • 10 mins</span></div><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">chevron_right</span></div></div>
+</div>
+<!-- Quick Pantry Health Status Card -->
+<div class="bg-primary-container text-on-primary rounded-2xl p-5 shadow-sm flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-28 h-28 rounded-full bg-secondary/20 pointer-events-none"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]">local_fire_department</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider text-primary-fixed">Hackathon Demo Loop</span>
+</div>
+<p class="font-body-sm text-body-sm text-inverse-on-surface">
+          Once you complete cooking, click <strong class="text-primary-fixed">Mark as Consumed</strong> to log this food rescue to your waste reduction telemetry.
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Next Expiry: Avocado (Expired)</span>
+<span class="font-label-sm text-label-sm underline cursor-pointer hover:text-white" onclick="document.getElementById('toastMessage').textContent='Pantry sync refreshed!'; document.getElementById('toastNotification').classList.remove('opacity-0', 'translate-y-24'); setTimeout(() =&gt; document.getElementById('toastNotification').classList.add('opacity-0', 'translate-y-24'), 2500);">Refresh</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple Interactive Hooks for Hackathon Demo Experience
+  const regenerateBtn = document.getElementById('regenerateBtn');
+  const consumeActionBtn = document.getElementById('consumeActionBtn');
+  const saveFavoriteBtn = document.getElementById('saveFavoriteBtn');
+  const favoriteIcon = document.getElementById('favoriteIcon');
+  const shareRecipeBtn = document.getElementById('shareRecipeBtn');
+  const toastNotification = document.getElementById('toastNotification');
+  const toastMessage = document.getElementById('toastMessage');
+
+  function showToast(message) {
+    if (!toastNotification || !toastMessage) return;
+    toastMessage.textContent = message;
+    toastNotification.classList.remove('opacity-0', 'translate-y-24');
+    setTimeout(() => {
+      toastNotification.classList.add('opacity-0', 'translate-y-24');
+    }, 2800);
+  }
+
+  if (regenerateBtn) {
+    regenerateBtn.addEventListener('click', () => {
+      const originalHtml = regenerateBtn.innerHTML;
+      regenerateBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+        <span>Chef AI is thinking...</span>
+      `;
+      regenerateBtn.disabled = true;
+      
+      setTimeout(() => {
+        regenerateBtn.innerHTML = originalHtml;
+        regenerateBtn.disabled = false;
+        showToast('Generated fresh zero-waste variations!');
+      }, 1200);
+    });
+  }
+
+  if (consumeActionBtn) {
+    consumeActionBtn.addEventListener('click', () => {
+      consumeActionBtn.classList.remove('bg-primary-container');
+      consumeActionBtn.classList.add('bg-status-fresh');
+      consumeActionBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px]">check_circle</span>
+        <span>Rescued &amp; Consumed! (+$9.50 Saved)</span>
+      `;
+      showToast('🎉 Success: Whole Milk & Spinach moved to Consumed!');
+    });
+  }
+
+  if (saveFavoriteBtn && favoriteIcon) {
+    saveFavoriteBtn.addEventListener('click', () => {
+      const isFav = favoriteIcon.textContent === 'favorite';
+      favoriteIcon.textContent = isFav ? 'favorite_border' : 'favorite';
+      favoriteIcon.style.color = isFav ? '' : '#E53935';
+      showToast(isFav ? 'Removed from saved recipes' : 'Saved to favorite recipes!');
+    });
+  }
+
+  if (shareRecipeBtn) {
+    shareRecipeBtn.addEventListener('click', () => {
+      showToast('Recipe URL copied to clipboard!');
+    });
+  }
+</script></main></div>
+
+</body></html>
