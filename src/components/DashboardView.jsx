@@ -50,7 +50,7 @@ export default function DashboardView({
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 pt-2">
         <div>
           <h1 className="font-headline-lg text-headline-lg text-text-primary tracking-tight font-bold">
-            {cuisine === 'indian' ? 'Namaste, Alex! 🙏' : 'Good afternoon, Alex! 👋'}
+            {cuisine === 'indian' ? 'Namaste, Rohan! 🙏' : 'Good afternoon, Rohan! 👋'}
           </h1>
           <p className="font-body-lg text-body-lg text-text-secondary mt-1">
             Here's what needs cooking first. {urgentItems.length} items require attention to avoid spoilage.

@@ -90,11 +90,11 @@ export default function Sidebar({
         <div className="p-3 bg-surface-card rounded-xl flex items-center justify-between shadow-[0_1px_3px_0_rgba(23,75,53,0.04)] border border-border-subtle/40">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-sm">
-              AX
+              R
             </div>
             <div className="flex flex-col">
               <span className="font-label-md text-label-md text-text-primary font-semibold leading-tight">
-                Alex Chen
+                Rohan
               </span>
               <span className="text-[11px] text-status-fresh font-medium flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-status-fresh"></span>

@@ -104,7 +104,7 @@ export default function Header({
 
         {/* Profile Avatar */}
         <div className="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs ring-2 ring-primary-container/20">
-          A
+          R
         </div>
       </div>
     </header>
