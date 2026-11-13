@@ -20,7 +20,7 @@ A utility application to help track food expiration dates and remind you to eat 
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/eat-before.git
+git clone https://github.com/Shaurya214/eat-before.git
 cd eat-before
 ```
 
