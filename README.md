@@ -6,6 +6,36 @@ ExpiryAlert is a responsive web application and digital pantry assistant designe
 
 ---
 
+## 📸 UI Showcase & Screenshots
+
+### 1. 📊 Smart Dashboard & Urgency Attention Ledger
+> *Real-time shelf-life tracking, perishables needing urgent attention, and generative daily chef picks.*
+
+![Smart Dashboard](./docs/screenshots/01-smart-dashboard.png)
+
+---
+
+### 2. 🥫 Digital Pantry & Add Item Modal
+> *Comprehensive pantry inventory with category filtering, storage locations, and a quick add modal featuring a real-time live urgency preview badge.*
+
+![Digital Pantry & Add Item Modal](./docs/screenshots/02-my-pantry-modal.png)
+
+---
+
+### 3. 🍳 Gemini-Powered AI Recipe Studio
+> *Zero-waste culinary engine prioritizing expiring ingredients, enforcing strict food safety guards (Rule US-004), and providing prompt transparency.*
+
+![Gemini AI Recipe Studio](./docs/screenshots/03-ai-recipe-chef.png)
+
+---
+
+### 4. 📈 Zero-Waste Analytics & Impact Scorecard
+> *Track rescued food, grocery money saved, household spoilage reduction rates, and complete consumption ledger.*
+
+![Zero-Waste Analytics & Impact Scorecard](./docs/screenshots/04-analytics-waste-reduction.png)
+
+---
+
 ## 🚀 Quick Start (Run Locally)
 
 ### 1. Prerequisites
@@ -102,6 +132,12 @@ npm run preview
 ```text
 eat-before/
 ├── dist/                              # Production build output
+├── docs/
+│   └── screenshots/                   # High-resolution UI showcase previews
+│       ├── 01-smart-dashboard.png
+│       ├── 02-my-pantry-modal.png
+│       ├── 03-ai-recipe-chef.png
+│       └── 04-analytics-waste-reduction.png
 ├── public/                            # Static assets
 ├── src/
 │   ├── components/
